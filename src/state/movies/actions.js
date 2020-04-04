@@ -7,9 +7,16 @@ export const loadMovies = movies => dispatch => {
   });
 };
 
-export const setMovieRating = movie => dispatch => {
+export const setMovieRating = (movieId, rating) => dispatch => {
   return dispatch({
     type: types.MOVIES_SET_RATING,
-    movie
+    movieId,
+    rating
+  });
+};
+
+export const sortList = () => dispatch => {
+  return dispatch({
+    type: types.MOVIES_SORT_LIST,
   });
 };

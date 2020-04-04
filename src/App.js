@@ -1,8 +1,13 @@
 import React from "react";
 import "./App.css";
+import MoviesListing from "./pages/MoviesListing";
 
-function App() {
-  return <div className="app">Movies Rating App</div>;
-}
+const App = () => {
+  return (
+    <div className="app">
+      <MoviesListing />
+    </div>
+  );
+};
 
 export default App;

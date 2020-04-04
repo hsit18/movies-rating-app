@@ -1,0 +1,37 @@
+.card-wrapper {
+  display: flex;
+  flex-direction: column;
+  background: #c6e3e8;
+  width: 31%;
+  list-style: none;
+  padding: 0.5%;
+  border: 1px solid #69c6d6;
+  border-radius: 4px;
+  margin: 0 0.5% 0.9% 0.5%;
+  min-width: 300px;
+}
+
+.card-title {
+  display: flex;
+  justify-content: space-between;
+  text-align: start;
+  margin-bottom: 20px;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.card-body span {
+  margin-bottom: 5px;
+}
+.label {
+  font-weight: bold;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: flex-end;
+}
