@@ -4,7 +4,7 @@ import MoviesListing from "./pages/MoviesListing";
 
 const App = () => {
   return (
-    <div className="app">
+    <div className="app" data-testid="app">
       <MoviesListing />
     </div>
   );

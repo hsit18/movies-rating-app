@@ -9,7 +9,7 @@ import "./style.css";
 
 const MoviesListing = () => {
   const dispatch = useDispatch();
-  const movies = useSelector(state => state.movies);
+  const movies = useSelector((state) => state.movies);
   const intervalRef = useRef(null);
 
   useEffect(() => {
@@ -36,6 +36,7 @@ const MoviesListing = () => {
         );
         dispatch(actions.sortList());
       }, 500);
+      console.log("ciclked", intervalRef.current);
     }
   };
 
@@ -43,14 +44,14 @@ const MoviesListing = () => {
     <div className="movies-container">
       <div className="title">
         <h1>Movies Rating App</h1>
-        <button onClick={toggleRandomRating}>
+        <button data-testid="random-rating" onClick={toggleRandomRating}>
           Random Rating {intervalRef.current ? "Stop" : "Start"}
         </button>
       </div>
 
-      <ul>
+      <ul data-testid="movies-list">
         {movies &&
-          movies.map(m => (
+          movies.map((m) => (
             <MovieCard key={m.id} movie={m} updateRating={updateRating} />
           ))}
       </ul>
